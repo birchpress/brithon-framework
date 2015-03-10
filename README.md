@@ -5,5 +5,5 @@ These modules are provided now:
   - `ns`: create a namespace.
   - `addListener`: add action.
   - `removeListener`: remove action.
-- `multimethod`
-  - same API as: [KrisJordan/multimethod-js](https://github.com/KrisJordan/multimethod-js)
+  - `on`: alias of `addListener`
+  - `multimethod`: same API as: [KrisJordan/multimethod-js](https://github.com/KrisJordan/multimethod-js)
