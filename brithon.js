@@ -143,13 +143,13 @@
         return exports;
     };
 
-    var addSubmodule = function(submodule) {
+    var mixin = function(submodule) {
         _submodules = _.merge(_submodules, submodule);
     }
 
 
     module.exports = {
         newInstance: newInstance,
-        addSubmodule: addSubmodule
+        mixin: mixin
     }
 }());

@@ -6,7 +6,7 @@
     var brithon = require('./brithon');
 
     var multimethod = require('./multimethod');
-    brithon.addSubmodule(multimethod);
+    brithon.mixin(multimethod);
     
     module.exports = brithon;
 }());
