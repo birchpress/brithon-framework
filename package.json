@@ -19,5 +19,6 @@
   "dependencies": {
     "lodash": "^3.5.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "private": true
 }
