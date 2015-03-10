@@ -1,0 +1,23 @@
+{
+  "name": "brithon-framework",
+  "version": "1.0.0",
+  "description": "Functional building blocks for Javascript.",
+  "main": "brithon.js",
+  "scripts": {
+    "test": "echo 'test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/birchpress/brithon-framework.git"
+  },
+  "author": "Brithon Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/birchpress/brithon-framework/issues"
+  },
+  "homepage": "https://github.com/birchpress/brithon-framework",
+  "dependencies": {
+    "lodash": "^3.5.0"
+  },
+  "devDependencies": {}
+}
