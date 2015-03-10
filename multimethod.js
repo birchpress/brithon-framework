@@ -7,8 +7,9 @@
 
 // (c) 2015 Brithon Inc.
 
-(function() {
+'use strict';
 
+(function() {
     var _ = require('lodash');
 
     var noop = function() {};
@@ -97,6 +98,7 @@
         return that;
     };
 
-    module.exports = multimethod;
-
+    module.exports = {
+        multimethod: multimethod
+    };
 }());
