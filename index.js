@@ -3,8 +3,10 @@
 (function() {
     var _ = require('lodash');
     
-    var namespace = require('./namespace');
+    var brithon = require('./brithon');
+
     var multimethod = require('./multimethod');
+    brithon.addSubmodule(multimethod);
     
-    module.exports = _.merge(namespace, multimethod);
+    module.exports = brithon;
 }());
