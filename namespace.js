@@ -1,5 +1,6 @@
-(function () {
+'use strict';
 
+(function () {
     var _ = require('lodash');
 
     var fnMap = {};
@@ -128,19 +129,10 @@
     };
 
     module.exports = {
-
         on: addListener,
-
         addListener: addListener,
-
         removeListener: removeListener,
-
         ns: defineNs,
-
-        multimethod: require('./multimethod'),
-
         assert: _assert
-
     };
-
 }());

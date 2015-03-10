@@ -2,7 +2,7 @@
   "name": "brithon-framework",
   "version": "1.0.0",
   "description": "Functional building blocks for Javascript.",
-  "main": "brithon.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo 'test'"
   },
