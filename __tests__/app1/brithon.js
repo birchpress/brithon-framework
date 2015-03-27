@@ -2,8 +2,7 @@
 
 jest.autoMockOff();
 
-//var brithon = require('brithon-framework').newInstance(); //when using npm
-var brithon = require('../../index').newInstance();
+var brithon = require('../../index').getInstance('app1');
 
 describe('brithon include file', function() {
 

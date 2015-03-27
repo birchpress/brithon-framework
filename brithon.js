@@ -5,6 +5,8 @@
 
     var _submodules = {};
 
+    var _instances = {};
+
     var newInstance = function() {
         var _fnMap = {};
 
@@ -130,7 +132,7 @@
             }
         };
 
-        var exports = {
+        var instance = {
             on: addListener,
             addListener: addListener,
             removeListener: removeListener,
@@ -138,9 +140,16 @@
             assert: _assert
         };
 
-        exports = _.merge(exports, _submodules);
+        instance = _.merge(instance, _submodules);
 
-        return exports;
+        return instance;
+    };
+
+    var getInstance = function(instanceName) {
+        if (!_.has(_instances, instanceName)) {
+            _instances[instanceName] = newInstance();
+        }
+        return _instances[instanceName];
     };
 
     var mixin = function(submodule) {
@@ -149,7 +158,7 @@
 
 
     module.exports = {
-        newInstance: newInstance,
+        getInstance: getInstance,
         mixin: mixin
     }
 }());
