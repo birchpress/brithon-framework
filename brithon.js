@@ -158,6 +158,7 @@
 
 
     module.exports = {
+        newInstance: newInstance,
         getInstance: getInstance,
         mixin: mixin
     }
