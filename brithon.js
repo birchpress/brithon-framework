@@ -4,17 +4,16 @@
     var _ = require('lodash');
 
     var _submodules = {};
-
     var _instances = {};
+
+    var _assert = function(assertion, message) {
+        if (!assertion) {
+            throw new Error(message);
+        }
+    };
 
     var newInstance = function() {
         var _fnMap = {};
-
-        var _assert = function(assertion, message) {
-            if (!assertion) {
-                throw new Error(message);
-            }
-        };
 
         var namespace = function(nsName, obj) {
             _assert(_.isString(nsName));
@@ -165,6 +164,7 @@
     };
 
     var getInstance = function(instanceName) {
+        _assert(_.isString(instanceName), 'instanceName must be a string');
         if (!_.has(_instances, instanceName)) {
             _instances[instanceName] = newInstance();
         }
