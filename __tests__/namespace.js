@@ -19,11 +19,18 @@ describe('namespace', function() {
 			}
 		});
 
+		var ns3 = brithon.ns('d', {
+			getCar: function() {
+				return 'car';
+			}
+		});
+
 		expect(brithon.a.b.c.getDog.fn).toBeDefined();
 		expect(ns1.getDog.fn).toBeDefined();
 		expect(brithon.a.b.getCat.fn).toBeDefined();
 		expect(brithon.a.b.c.getDog()).toBe('dog');
 		expect(brithon.a.b.getCat()).toBe('cat');
+		expect(brithon.d.getCar()).toBe('car');
 		expect(ns1.getDog()).toBe('dog');
 	});
 });

@@ -23,7 +23,7 @@
             var currentStr = ns[0];
             var current = instance[currentStr] = createNs(currentStr, instance[currentStr]);
             var sub = ns.slice(1);
-            len = sub.length;
+            var len = sub.length;
             for (var i = 0; i < len; ++i) {
                 currentStr = currentStr + '.' + sub[i];
                 current[sub[i]] = createNs(currentStr, current[sub[i]]);
@@ -173,12 +173,12 @@
 
     var mixin = function(submodule) {
         _submodules = _.merge(_submodules, submodule);
-    }
+    };
 
 
     module.exports = {
         newInstance: newInstance,
         getInstance: getInstance,
         mixin: mixin
-    }
+    };
 }());
