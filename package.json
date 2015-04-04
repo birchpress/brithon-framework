@@ -19,7 +19,17 @@
   "dependencies": {
     "lodash": "^3.5.0"
   },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "lodash": "global:_"
+  },
   "devDependencies": {
+    "browserify": "^9.0.4",
+    "browserify-shim": "^3.8.3",
     "jest-cli": "^0.4.0"
   },
   "private": true
