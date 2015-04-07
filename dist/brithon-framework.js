@@ -88,7 +88,7 @@
             _assert(!_.has(fn, 'fn'), 'The 3rd argument is already a hookable function');
 
             var eventName = ns.nsString + '.' + fnName;
-            var preEventName = eventName + '-pre';
+            var preEventName = eventName + ':before';
             var hookable = function() {
                 var args = argumentsToArray(arguments);
 
